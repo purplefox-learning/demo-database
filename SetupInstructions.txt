@@ -1,0 +1,24 @@
+Run the h2/run_h2_server.bat
+
+Once the server is up successfully, the following information are printed on the console.
+* TCP server running at tcp://10.65.16.158:9092
+* Web Console server running at http://10.65.16.158:8999
+
+Log in to the web console at http://localhost:8999/login.do
+* Driver Class: org.h2.Driver
+* JDBC URL: jdbc:h2:tcp://localhost:9092/./testdb
+* User Name: test
+* Password: test
+Once log in, we are successfully connected to a database called 'testdb'. There is a predefined table called COUNTRY.
+
+The table and its data are created via the following SQL scripts
+DROP TABLE IF EXISTS COUNTRY;
+CREATE TABLE COUNTRY (CODE VARCHAR(5) PRIMARY KEY, DESCRIPTION VARCHAR(255));
+INSERT INTO COUNTRY VALUES('CN', 'China');
+INSERT INTO COUNTRY VALUES('US', 'United States');
+INSERT INTO COUNTRY VALUES('UK', 'United Kingdom');
+
+If needed, copy the .h2.server.properties to c:\users\userID
+
+
+
